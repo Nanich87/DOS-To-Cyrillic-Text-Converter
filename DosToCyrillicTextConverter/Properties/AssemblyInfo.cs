@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Dos2Cyr")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("DOS To Cyrillic Text Converter")]
+[assembly: AssemblyDescription("DOS To Cyrillic Text Converter")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Dos2Cyr")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("SixEightOne.eu")]
+[assembly: AssemblyProduct("DOS To Cyrillic Text Converter")]
+[assembly: AssemblyCopyright("Copyright © 2015-2016 by SixEightOne.eu")]
+[assembly: AssemblyTrademark("SixEightOne.eu")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

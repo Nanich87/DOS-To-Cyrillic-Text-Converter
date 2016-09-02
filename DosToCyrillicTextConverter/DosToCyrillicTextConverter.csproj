@@ -7,8 +7,8 @@
     <ProjectGuid>{958D2F11-3C4B-4BB6-BFEC-328B225E0611}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dos2Cyr</RootNamespace>
-    <AssemblyName>Dos2Cyr</AssemblyName>
+    <RootNamespace>DosToCyrillicTextConverter</RootNamespace>
+    <AssemblyName>DosToCyrillicTextConverter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

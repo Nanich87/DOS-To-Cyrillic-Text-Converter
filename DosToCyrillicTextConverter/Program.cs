@@ -1,24 +1,14 @@
-﻿namespace Dos2Cyr
+﻿namespace DosToCyrillicTextConverter
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.IO;
+    using System.Text;
 
-    class Program
+    internal class Program
     {
-        private static void Init()
+        public static void Main(string[] args)
         {
-            Console.Title = "Dos 2 Cyrillic";
-            Console.OutputEncoding = System.Text.Encoding.GetEncoding("Cyrillic");
-            Console.InputEncoding = System.Text.Encoding.GetEncoding("Cyrillic");
-        }
-
-        static void Main(string[] args)
-        {
-            Program.Init();
+            Program.InitConsoleWindow();
 
             while (true)
             {
@@ -38,7 +28,7 @@
                             while (!reader.EndOfStream)
                             {
                                 string line = reader.ReadLine();
-                                byte[] bytes = System.Text.Encoding.Default.GetBytes(line);
+                                byte[] bytes = Encoding.Default.GetBytes(line);
 
                                 for (int i = 0; i < bytes.Length; i++)
                                 {
@@ -48,7 +38,7 @@
                                     }
                                 }
 
-                                var convertedString = System.Text.Encoding.Default.GetString(bytes);
+                                var convertedString = Encoding.Default.GetString(bytes);
 
                                 output.AppendLine(convertedString);
                             }
@@ -58,12 +48,19 @@
                         string fileName = Path.GetFileNameWithoutExtension(file);
                         string extension = Path.GetExtension(file);
 
-                        File.WriteAllText(directory + Path.DirectorySeparatorChar + fileName + "_converted" + extension, output.ToString(), Encoding.Default);
+                        File.WriteAllText(string.Format("{0}{1}{2}_converted{3}", directory, Path.DirectorySeparatorChar, fileName, extension), output.ToString(), Encoding.Default);
 
                         Console.WriteLine(string.Format("File {0}{1} has been successfully converted!", fileName, extension));
                     }
                 }
             }
+        }
+
+        private static void InitConsoleWindow()
+        {
+            Console.Title = "DOS To Cyrillic Text Converter v1.0.0";
+            Console.OutputEncoding = Encoding.GetEncoding("Cyrillic");
+            Console.InputEncoding = Encoding.GetEncoding("Cyrillic");
         }
     }
 }
