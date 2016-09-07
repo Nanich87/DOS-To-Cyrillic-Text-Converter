@@ -1,5 +1,6 @@
 ﻿namespace DosToCyrillicTextConverter
 {
+    using Helpers;
     using System;
     using System.IO;
     using System.Text;
@@ -28,17 +29,8 @@
                             while (!reader.EndOfStream)
                             {
                                 string line = reader.ReadLine();
-                                byte[] bytes = Encoding.Default.GetBytes(line);
 
-                                for (int i = 0; i < bytes.Length; i++)
-                                {
-                                    if (bytes[i] >= 127 && bytes[i] <= 191)
-                                    {
-                                        bytes[i] += (byte)64;
-                                    }
-                                }
-
-                                var convertedString = Encoding.Default.GetString(bytes);
+                                var convertedString = CyrillicHelper.ConvertString(line);
 
                                 output.AppendLine(convertedString);
                             }
