@@ -1,9 +1,9 @@
 ﻿namespace DosToCyrillicTextConverter
 {
-    using Helpers;
     using System;
     using System.IO;
     using System.Text;
+    using Helpers;
 
     internal class Program
     {
@@ -50,7 +50,7 @@
 
         private static void InitConsoleWindow()
         {
-            Console.Title = "DOS To Cyrillic Text Converter v1.0.0";
+            Console.Title = "DOS To Cyrillic Text Converter v1.1.0";
             Console.OutputEncoding = Encoding.GetEncoding("Cyrillic");
             Console.InputEncoding = Encoding.GetEncoding("Cyrillic");
         }

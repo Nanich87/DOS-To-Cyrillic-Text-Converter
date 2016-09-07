@@ -1,8 +1,8 @@
 ﻿namespace DosToCyrillicTextConverter.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Helpers;
-
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    
     [TestClass]
     public class CyrillicHelperTests
     {
